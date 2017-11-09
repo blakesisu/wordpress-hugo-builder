@@ -1,0 +1,637 @@
+hideeho
+  You&#8217;re still goin&#8217; strong  Dolly&#8217;ll never go awayTue Nov 07 '17 01.28 AM &raquo;   You&#8217;re still glowin&#8217;, you&#8217;re still crowin&#8217;<br>Tue Nov 07 '17 01.28 AM &raquo;   Dolly&#8217;ll never go away<br>Tue Nov 07 '17 01.28 AM &raquo;   You&#8217;re still glowin&#8217;, you&#8217;re still crowin&#8217;<br>Wed Nov 08 '17 05.52 PM &raquo; slack notif failed<br>Wed Nov 08 '17 05.52 PM &raquo; slack notif failed<br>Wed Nov 08 '17 06.11 PM &raquo; invalid_payload<br>Wed Nov 08 '17 06.13 PM &raquo; invalid_payload<br>Wed Nov 08 '17 06.33 PM &raquo; invalid_payload<br>Wed Nov 08 '17 10.13 PM &raquo; invalid_payload<br>Wed Nov 08 '17 10.13 PM &raquo; invalid_payload<br>Wed Nov 08 '17 10.18 PM &raquo; Array<br>Wed Nov 08 '17 10.21 PM &raquo; ok<br>Wed Nov 08 '17 11.07 PM &raquo; cURL error 28: Resolving timed out after 5514 milliseconds<br>Thu Nov 09 '17 12.19 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /wp-hugo</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 12.19 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /wp-hugo</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 12.20 AM &raquo; A valid URL was not provided.<br>Thu Nov 09 '17 12.21 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /wp-hugo</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 12.30 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.30 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.32 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.32 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.39 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.39 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.40 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.40 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.42 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.42 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.43 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.47 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.48 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.52 AM &raquo; <br>Thu Nov 09 '17 12.55 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 12.57 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 01.00 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 01.00 AM &raquo; Hello Hugo!
+<br>Thu Nov 09 '17 01.03 AM &raquo;   Golly, gee, fellas<br>Thu Nov 09 '17 01.11 AM &raquo; build<br>Thu Nov 09 '17 01.12 AM &raquo; build<br>Thu Nov 09 '17 01.13 AM &raquo; build<br>Thu Nov 09 '17 01.13 AM &raquo; build<br>Thu Nov 09 '17 01.14 AM &raquo; build<br>Thu Nov 09 '17 01.15 AM &raquo; build<br>Thu Nov 09 '17 01.16 AM &raquo; build<br>Thu Nov 09 '17 01.16 AM &raquo; total 68
+drwxr-xr-x   5 node     node      4096 Nov  9 00:36 .
+drwxr-xr-x   1 app-user app-user  4096 Nov  9 00:10 ..
+-rw-r--r--   1 node     node        27 Nov  8 22:54 .dockerignore
+drwxr-xr-x   9 node     node      4096 Nov  9 01:16 .git
+-rwxr-xr-x   1 node     node       640 Nov  9 00:13 .gitignore
+-rw-r--r--   1 node     node       146 Nov  8 23:05 .gitmodules
+-rw-r--r--   1 node     node       418 Nov  9 00:10 Dockerfile
+-rw-r--r--   1 node     node        24 Nov  8 23:01 README.md
+-rw-r--r--   1 node     node       207 Nov  9 00:12 docker-compose.yml
+drwxr-xr-x   5 node     node      4096 Nov  8 23:07 hugo-static-builder-module
+drwxr-xr-x 205 app-user app-user 12288 Nov  9 00:11 node_modules
+-rw-r--r--   1 node     node      4994 Nov  9 00:36 package-lock.json
+-rw-r--r--   1 node     node       420 Nov  9 00:36 package.json
+-rw-r--r--   1 node     node      1035 Nov  9 01:16 server.js
+<br>Thu Nov 09 '17 01.17 AM &raquo; <br>Thu Nov 09 '17 01.17 AM &raquo; <br>Thu Nov 09 '17 01.18 AM &raquo; total 68
+drwxr-xr-x   5 node     node      4096 Nov  9 00:36 .
+drwxr-xr-x   1 app-user app-user  4096 Nov  9 00:10 ..
+-rw-r--r--   1 node     node        27 Nov  8 22:54 .dockerignore
+drwxr-xr-x   9 node     node      4096 Nov  9 01:18 .git
+-rwxr-xr-x   1 node     node       640 Nov  9 00:13 .gitignore
+-rw-r--r--   1 node     node       146 Nov  8 23:05 .gitmodules
+-rw-r--r--   1 node     node       418 Nov  9 00:10 Dockerfile
+-rw-r--r--   1 node     node        24 Nov  8 23:01 README.md
+-rw-r--r--   1 node     node       207 Nov  9 00:12 docker-compose.yml
+drwxr-xr-x   5 node     node      4096 Nov  8 23:07 hugo-static-builder-module
+drwxr-xr-x 205 app-user app-user 12288 Nov  9 00:11 node_modules
+-rw-r--r--   1 node     node      4994 Nov  9 00:36 package-lock.json
+-rw-r--r--   1 node     node       420 Nov  9 00:36 package.json
+-rw-r--r--   1 node     node      1035 Nov  9 01:18 server.js
+<br>Thu Nov 09 '17 01.18 AM &raquo; total 336
+drwxr-xr-x   5 node node   4096 Nov  8 23:07 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  8 23:05 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 01.25 AM &raquo; total 340
+drwxr-xr-x   5 node node   4096 Nov  9 01:22 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1954 Nov  9 01:20 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rw-r--r--   1 node node     52 Nov  9 01:22 tester.js
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 01.28 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>TypeError: child.chdir is not a function<br> &nbsp; &nbsp;at app.post (/home/app-user/app/server.js:32:11)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/home/app-user/app/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /home/app-user/app/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/home/app-user/app/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at /home/app-user/app/node_modules/body-parser/lib/read.js:130:5<br> &nbsp; &nbsp;at invokeCallback (/home/app-user/app/node_modules/raw-body/index.js:224:16)</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 01.48 AM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 01.54 AM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 01.55 AM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 01.56 AM &raquo; 
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, prune, publish, rb,
+    rebuild, repo, restart, root, run, run-script, s, se,
+    search, set, shrinkwrap, star, stars, start, stop, t, team,
+    test, tst, un, uninstall, unpublish, unstar, up, update, v,
+    version, view, whoami
+
+npm <command> -h     quick help on <command>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /home/app-user/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@5.4.2 /usr/local/lib/node_modules/npm
+<br>Thu Nov 09 '17 02.00 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>ReferenceError: span is not defined<br> &nbsp; &nbsp;at app.post (/home/app-user/app/server.js:35:17)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/home/app-user/app/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /home/app-user/app/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/home/app-user/app/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at /home/app-user/app/node_modules/body-parser/lib/read.js:130:5<br> &nbsp; &nbsp;at invokeCallback (/home/app-user/app/node_modules/raw-body/index.js:224:16)</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 02.00 AM &raquo; <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>TypeError: Incorrect value of args option<br> &nbsp; &nbsp;at normalizeSpawnArguments (child_process.js:386:11)<br> &nbsp; &nbsp;at exports.spawn (child_process.js:493:38)<br> &nbsp; &nbsp;at app.post (/home/app-user/app/server.js:35:17)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/home/app-user/app/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/app-user/app/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /home/app-user/app/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/home/app-user/app/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/app-user/app/node_modules/express/lib/router/index.js:275:10)</pre>
+</body>
+</html>
+<br>Thu Nov 09 '17 02.01 AM &raquo; cURL error 52: Empty reply from server<br>Thu Nov 09 '17 02.02 AM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 02.04 AM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 02.07 AM &raquo; yarn run v1.2.1
+$ rm tester.js
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 02.10 AM &raquo; yarn run v1.2.1
+$ rm tester.js
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 05.28 PM &raquo; cURL error 7: Failed to connect to localhost port 3000: Connection refused<br>Thu Nov 09 '17 05.31 PM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 05.32 PM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 05.33 PM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 05.33 PM &raquo; yarn run v1.2.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 336
+drwxr-xr-x   5 node node   4096 Nov  9 02:13 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 02:13 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 05.36 PM &raquo; total 340
+drwxr-xr-x   5 node node   4096 Nov  9 17:34 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1956 Nov  9 17:35 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rw-r--r--   1 node node     24 Nov  9 17:34 tester.md
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 05.36 PM &raquo; yarn run v1.2.1
+$ rm -rf tester.md
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   5 node node   4096 Nov  9 17:34 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1956 Nov  9 17:35 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rw-r--r--   1 node node     24 Nov  9 17:34 tester.md
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 05.37 PM &raquo; # hugo_builder_node_api
+<br>Thu Nov 09 '17 05.40 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[17:40:26] Requiring external module babel-register
+[17:40:27] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[17:40:27] Starting 'build'...
+[17:40:27] Starting 'styles'...
+[17:40:27] Starting 'scripts'...
+[17:40:27] Starting 'hugo'...
+[17:40:27] Starting 'static'...
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+<br>Thu Nov 09 '17 05.41 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[17:41:28] Requiring external module babel-register
+[17:41:29] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[17:41:29] Starting 'build'...
+[17:41:29] Starting 'styles'...
+[17:41:29] Starting 'scripts'...
+[17:41:29] Starting 'hugo'...
+[17:41:29] Starting 'static'...
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   5 node node   4096 Nov  9 17:34 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5599 Nov  8 23:05 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1956 Nov  9 17:35 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rw-r--r--   1 node node     24 Nov  9 17:34 tester.md
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 06.06 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[18:06:17] Requiring external module babel-register
+[18:06:18] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[18:06:18] Starting 'build'...
+[18:06:18] Starting 'styles'...
+[18:06:18] Starting 'scripts'...
+[18:06:18] Starting 'hugo'...
+[18:06:18] Starting 'static'...
+[18:06:18] Finished 'static' after 10 ms
+INFO 2017/11/09 18:06:18 Using config file: config.toml
+WARN 2017/11/09 18:06:18 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 18:06:18 No static directories found to sync
+WARN 2017/11/09 18:06:18 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 18:06:18 found taxonomies: map[string]string{}
+[18:06:18] gulp-notify: [Task Failed [undefined]]  See console.
+[18:06:18] gulp-notify: [Error in notifier] Error in plugin 'gulp-notify'
+Message:
+    not found: notify-send
+Details:
+    code: ENOENT
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 18:04 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 06.41 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[18:41:41] Requiring external module babel-register
+[18:41:42] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[18:41:42] Starting 'build'...
+[18:41:42] Starting 'styles'...
+[18:41:42] Starting 'scripts'...
+[18:41:42] Starting 'hugo'...
+[18:41:42] Starting 'static'...
+[18:41:42] Finished 'static' after 9.84 ms
+INFO 2017/11/09 18:41:42 Using config file: config.toml
+WARN 2017/11/09 18:41:42 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 18:41:42 No static directories found to sync
+WARN 2017/11/09 18:41:42 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 18:41:42 found taxonomies: map[string]string{}
+[18:41:42] gulp-notify: [Task Failed [undefined]]  See console.
+[18:41:42] gulp-notify: [Error in notifier] Error in plugin 'gulp-notify'
+Message:
+    not found: notify-send
+Details:
+    code: ENOENT
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 18:04 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 06.43 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[18:43:52] Requiring external module babel-register
+[18:43:52] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[18:43:52] Starting 'build'...
+[18:43:52] Starting 'styles'...
+[18:43:52] Starting 'scripts'...
+[18:43:52] Starting 'hugo'...
+[18:43:52] Starting 'static'...
+[18:43:52] INFO 2017/11/09 18:43:52 Using config file: config.toml
+Finished 'static' after 9.95 ms
+WARN 2017/11/09 18:43:52 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 18:43:52 No static directories found to sync
+WARN 2017/11/09 18:43:52 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 18:43:52 found taxonomies: map[string]string{}
+[18:43:52] gulp-notify: [Task Failed [undefined]]  See console.
+[18:43:52] gulp-notify: [Error in notifier] Error in plugin 'gulp-notify'
+Message:
+    not found: notify-send
+Details:
+    code: ENOENT
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 18:04 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 06.47 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[18:47:42] Requiring external module babel-register
+[18:47:43] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[18:47:43] Starting 'build'...
+[18:47:43] Starting 'styles'...
+[18:47:43] Starting 'scripts'...
+[18:47:43] Starting 'hugo'...
+[18:47:43] Starting 'static'...
+[18:47:43] Finished 'static' after 9.81 ms
+INFO 2017/11/09 18:47:43 Using config file: config.toml
+WARN 2017/11/09 18:47:43 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 18:47:43 No static directories found to sync
+WARN 2017/11/09 18:47:43 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 18:47:43 found taxonomies: map[string]string{}
+[18:47:43] gulp-notify: [Task Failed [undefined]]  See console.
+[18:47:43] gulp-notify: [Error in notifier] Error in plugin 'gulp-notify'
+Message:
+    not found: notify-send
+Details:
+    code: ENOENT
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 18:04 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 08.24 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[20:24:08] Requiring external module babel-register
+[20:24:09] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[20:24:09] Starting 'build'...
+[20:24:09] Starting 'styles'...
+[20:24:09] Starting 'scripts'...
+[20:24:09] Starting 'hugo'...
+[20:24:09] Starting 'static'...
+[20:24:09] Finished 'static' after 9.22 ms
+INFO 2017/11/09 20:24:09 Using config file: config.toml
+WARN 2017/11/09 20:24:09 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 20:24:09 No static directories found to sync
+WARN 2017/11/09 20:24:09 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 20:24:09 found taxonomies: map[string]string{}
+[20:24:09] gulp-notify: [Task Failed [undefined]]  See console.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 18:04 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 08.37 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[20:37:38] Requiring external module babel-register
+[20:37:39] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[20:37:39] Starting 'build'...
+[20:37:39] Starting 'styles'...
+[20:37:39] Starting 'scripts'...
+[20:37:39] Starting 'hugo'...
+[20:37:39] Starting 'static'...
+[20:37:39] INFO 2017/11/09 20:37:39 Using config file: config.toml
+Finished 'static' after 10 ms
+WARN 2017/11/09 20:37:39 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 20:37:39 No static directories found to sync
+WARN 2017/11/09 20:37:39 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 20:37:39 found taxonomies: map[string]string{}
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5688 Nov  9 20:37 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 08.40 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[20:40:48] Requiring external module babel-register
+[20:40:49] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[20:40:49] Starting 'build'...
+[20:40:49] Starting 'styles'...
+[20:40:49] Starting 'scripts'...
+[20:40:49] Starting 'hugo'...
+[20:40:49] Starting 'static'...
+[20:40:49] Finished 'static' after 9.95 ms
+INFO 2017/11/09 20:40:49 Using config file: config.toml
+WARN 2017/11/09 20:40:49 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 20:40:49 No static directories found to sync
+WARN 2017/11/09 20:40:49 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 20:40:49 found taxonomies: map[string]string{}
+[20:40:49] gulp-notify: [Task Failed [undefined]]  See console.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 20:38 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 08.42 PM &raquo; yarn run v1.2.1
+$ rm -rf ./dist && cross-env NODE_ENV=production gulp build
+[20:42:02] Requiring external module babel-register
+[20:42:03] Using gulpfile ~/app/hugo-static-builder-module/gulpfile.babel.js
+[20:42:03] Starting 'build'...
+[20:42:03] Starting 'styles'...
+[20:42:03] Starting 'scripts'...
+[20:42:03] Starting 'hugo'...
+[20:42:03] Starting 'static'...
+[20:42:03] Finished 'static' after 9.19 ms
+INFO 2017/11/09 20:42:03 Using config file: config.toml
+WARN 2017/11/09 20:42:03 Unable to find Static Directory: /home/app-user/app/hugo-static-builder-module/static/
+WARN 2017/11/09 20:42:03 No static directories found to sync
+WARN 2017/11/09 20:42:03 No translation bundle found for default language "en"
+Started building sites ...
+INFO 2017/11/09 20:42:03 found taxonomies: map[string]string{}
+[20:42:03] gulp-notify: [Task Failed [undefined]]  See console.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+total 340
+drwxr-xr-x   6 node node   4096 Nov  9 18:03 .
+drwxr-xr-x   5 node node   4096 Nov  9 00:36 ..
+-rwxr-xr-x   1 node node    116 Nov  8 23:05 .babelrc
+-rw-r--r--   1 node node    307 Nov  8 23:05 .editorconfig
+-rwxr-xr-x   1 node node    732 Nov  8 23:05 .eslintrc.json
+-rw-r--r--   1 node node     51 Nov  8 23:05 .git
+-rwxr-xr-x   1 node node    640 Nov  8 23:05 .gitignore
+-rw-r--r--   1 node node    104 Nov  8 23:05 .modernizrrc
+-rw-r--r--   1 node node   6651 Nov  8 23:05 GoTemplates.md
+-rw-r--r--   1 node node   1067 Nov  8 23:05 LICENSE
+-rwxr-xr-x   1 node node  10497 Nov  8 23:05 README.md
+drwxr-xr-x   2 node node   4096 Nov  9 18:02 bin
+-rwxr-xr-x   1 node node    437 Nov  8 23:05 config.toml
+-rwxr-xr-x   1 node node   5664 Nov  9 20:38 gulpfile.babel.js
+drwxr-xr-x   2 node node   4096 Nov  8 23:05 i18n
+drwxr-xr-x 862 node node  32768 Nov  8 23:18 node_modules
+-rwxr-xr-x   1 node node   1919 Nov  9 17:59 package.json
+drwxr-xr-x   9 node node   4096 Nov  8 23:05 src
+-rwxr-xr-x   1 node node   5308 Nov  8 23:05 webpack.conf.js
+-rw-r--r--   1 node node 218373 Nov  8 23:05 yarn.lock
+<br>Thu Nov 09 '17 08.50 PM &raquo; cURL error 52: Empty reply from server<br>
