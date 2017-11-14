@@ -1,2 +1,0 @@
-<?php
-// sites/pages
