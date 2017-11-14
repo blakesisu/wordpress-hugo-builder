@@ -12,21 +12,8 @@ Version: 1.6
 Author URI: https://blkmwtkns.co/
 */
 
-// If the functions have already been autoloaded, don't reload.
-// This fixes function duplication during unit testing.
-// $path = dirname( __FILE__ ) . '/vendor/autoload_52.php';
-// if ( ! function_exists( 'get_the_github_view_link' ) && file_exists( $path ) ) {
-// 	require_once $path;
-// }
-
-include 'lib/controller.php';
-include 'logger.php';
-// include 'lib/admin.php';
-
-add_action( 'plugins_loaded', array( new WordPress_Hugo_Builder, 'boot' ) );
-
 /**
- * Class WordPress_Hugo_Builder
+ * @package WPHB
  *
  * Main application class for the plugin. Responsible for bootstrapping
  * any hooks and instantiating all service classes.
@@ -52,14 +39,15 @@ class WordPress_Hugo_Builder {
    *
    * @var string
    */
-  public static $version = '0.1';
+  public $version = '0.1';
+	const PLG_CLS_PRFX = 'WPHB_';
 
   /**
-   * Controller object.
+   * Compiler object.
    *
-   * @var WordPress_Hugo_Builder_Controller
+   * @var WPHB_Compiler
    */
-  public $controller;
+  public $compiler;
 
   /**
    * Logger object.
@@ -69,312 +57,114 @@ class WordPress_Hugo_Builder {
   public $logger;
 
   /**
-   * Admin object.
+   * Sensor object.
    *
-   * @var WordPress_Hugo_Builder_Admin
+   * @var Sensors
    */
-  // public $admin;
+  public $sensors;
 
-  /**
-   * CLI object.
-   *
-   * @var WordPress_Hugo_Builder_CLI
-   */
-  // protected $cli;
-
-  /**
-   * Request object.
-   *
-   * @var WordPress_Hugo_Builder_Request
-   */
-  // protected $request;
-
-  /**
-   * Response object.
-   *
-   * @var WordPress_Hugo_Builder_Response
-   */
-  // protected $response;
-
-  /**
-   * Api object.
-   *
-   * @var WordPress_Hugo_Builder_Api
-   */
-  // protected $api;
-
-  /**
-   * Export object.
-   *
-   * @var WordPress_Hugo_Builder_Export
-   */
-  // protected $export;
-
-  /**
-   * Semaphore object.
-   *
-   * @var WordPress_Hugo_Builder_Semaphore
-   */
-  // protected $semaphore;
+	/**
+	 * Standard singleton pattern.
+	 * WARNING! To ensure the system always works as expected, AVOID using this method.
+	 * Instead, make use of the plugin instance provided by 'wsal_init' action.
+	 * @return WordPress_Hugo_Builder Returns the current plugin instance.
+	 */
+	public static function GetInstance()
+	{
+		static $instance = null;
+		if (!$instance) {
+			$instance = new self();
+		}
+		return $instance;
+	}
 
   /**
    * Called at load time, hooks into WP core
    */
   public function __construct() {
-    self::$instance = $this;
+    // Define important plugin constants.
+    $this->define_constants();
 
-    // if ( is_admin() ) {
-    //   $this->admin = new WordPress_Hugo_Builder_Admin;
-    // }
+    require_once( 'classes/Autoloader.php' );
+    require_once( 'logger.php' );
+    $this->autoloader = new WPHB_Autoloader( $this );
+    $this->autoloader->Register( self::PLG_CLS_PRFX, $this->GetBaseDir() . 'classes' . DIRECTORY_SEPARATOR );
 
-    $this->controller = new WordPress_Hugo_Builder_Controller( $this );
+    $this->compiler = new WPHB_Compiler( $this );
+    $this->sensors = new WPHB_SensorManager( $this );
 
-    // if ( defined( 'WP_CLI' ) && WP_CLI ) {
-    //   WP_CLI::add_command( 'wphb', $this->cli() );
-    // }
+    add_action( 'init', array( $this, 'Init' ) );
   }
 
   /**
-   * Attaches the plugin's hooks into WordPress.
+   * Boot/Loader method
    */
   public function boot() {
-    // register_activation_hook( __FILE__, array( $this, 'activate' ) );
-    // add_action( 'admin_notices', array( $this, 'activation_notice' ) );
-
-    // Controller actions.
-    // At least triggers when posts are created and updated
-    // Posts
-    add_action( 'post_updated_messages', array( $this->controller, 'build_hugo' ) );
-    // add_action('post_updated', array($this, 'EventChanged'), 10, 3);
-    // add_action('delete_post', array($this, 'EventDeleted'), 10, 1);
-    // add_action('wp_trash_post', array($this, 'EventTrashed'), 10, 1);
-    // add_action('untrash_post', array($this, 'EventUntrashed'));
-
-    // Login/out
-    // add_action('wp_login', array($this->controller, 'build_hugo'), 10, 2);
-    // add_action('wp_logout', array($this->controller, 'build_hugo'));
-    // add_action('shutdown', array($this->controller, 'build_hugo'));
-
-    // Theme
-		// add_action( 'switch_theme', array( $this, 'EventThemeActivated' ) );
-
-    // Sites
-    // public function HookEvents()
-    // {
-    //     if ($this->plugin->IsMultisite()) {
-    //         add_action('admin_init', array($this, 'EventAdminInit'));
-    //         if (current_user_can('switch_themes')) {
-    //             add_action('shutdown', array($this, 'EventAdminShutdown'));
-    //         }
-    //         add_action('wpmu_new_blog', array($this, 'EventNewBlog'), 10, 1);
-    //         add_action('archive_blog', array($this, 'EventArchiveBlog'));
-    //         add_action('unarchive_blog', array($this, 'EventUnarchiveBlog'));
-    //         add_action('activate_blog', array($this, 'EventActivateBlog'));
-    //         add_action('deactivate_blog', array($this, 'EventDeactivateBlog'));
-    //         add_action('delete_blog', array($this, 'EventDeleteBlog'));
-    //         add_action('add_user_to_blog', array($this, 'EventUserAddedToBlog'), 10, 3);
-    //         add_action('remove_user_from_blog', array($this, 'EventUserRemovedFromBlog'));
-    //     }
-    // }
-
-    // Menus
-    // public function HookEvents()
-    // {
-    //     add_action('wp_create_nav_menu', array($this, 'CreateMenu'), 10, 2);
-    //     add_action('wp_delete_nav_menu', array($this, 'DeleteMenu'), 10, 1);
-    //     add_action('wp_update_nav_menu', array($this, 'UpdateMenu'), 10, 2);
-    //
-    //     add_action('wp_update_nav_menu_item', array($this, 'UpdateMenuItem'), 10, 3);
-    //     add_action('admin_menu', array($this, 'ManageMenuLocations'));
-    //
-    //     add_action('admin_init', array($this, 'EventAdminInit'));
-    //     // Customizer trigger
-    //     add_action('customize_register', array($this, 'CustomizeInit'));
-    //     add_action('customize_save_after', array($this, 'CustomizeSave'));
-    // }
+    // Load up stuff here if needed
+  }
 
 
-    // Attachments
-    // public function HookEvents()
-    // {
-    //     add_action('add_attachment', array($this, 'EventFileUploaded'));
-    //     add_action('delete_attachment', array($this, 'EventFileUploadedDeleted'));
-    //     add_action('admin_init', array($this, 'EventAdminInit'));
-    // }
-
-    // Content
-    // public function HookEvents()
-    // {
-    // 	if (current_user_can("edit_posts")) {
-    // 		add_action('admin_init', array($this, 'EventWordpressInit'));
-    // 	}
-    // 	add_action('transition_post_status', array($this, 'EventPostChanged'), 10, 3);
-    // 	add_action('delete_post', array($this, 'EventPostDeleted'), 10, 1);
-    // 	add_action('wp_trash_post', array($this, 'EventPostTrashed'), 10, 1);
-    // 	add_action('untrash_post', array($this, 'EventPostUntrashed'));
-    // 	add_action('edit_category', array($this, 'EventChangedCategoryParent'));
-    // 	add_action('save_post', array($this, 'SetRevisionLink'), 10, 3);
-    // 	add_action('publish_future_post', array($this, 'EventPublishFuture'), 10, 1);
-    //
-    // 	add_action('create_category', array($this, 'EventCategoryCreation'), 10, 1);
-    // 	add_action( 'create_post_tag', array( $this, 'EventTagCreation' ), 10, 1 );
-    //
-    // 	add_action( 'wp_head', array( $this, 'ViewingPost' ), 10 );
-    // 	add_filter('post_edit_form_tag', array($this, 'EditingPost'), 10, 1);
-    //
-    // 	add_filter( 'wp_update_term_data', array( $this, 'event_terms_rename' ), 10, 4 );
-    // }
-
-
-    // Comments
-    // public function HookEvents()
-    // {
-    //     add_action('edit_comment', array($this, 'EventCommentEdit'), 10, 1);
-    //     add_action('transition_comment_status', array($this, 'EventCommentApprove'), 10, 3);
-    //     add_action('spammed_comment', array($this, 'EventCommentSpam'), 10, 1);
-    //     add_action('unspammed_comment', array($this, 'EventCommentUnspam'), 10, 1);
-    //     add_action('trashed_comment', array($this, 'EventCommentTrash'), 10, 1);
-    //     add_action('untrashed_comment', array($this, 'EventCommentUntrash'), 10, 1);
-    //     add_action('deleted_comment', array($this, 'EventCommentDeleted'), 10, 1);
-    //     add_action('comment_post', array($this, 'EventComment'), 10, 2);
-    // }
-
-    // add_shortcode( 'wphb', 'write_wphb_link' );
-
-    // do_action( 'wphb_boot', $this );
+  /**
+   * @internal Start to trigger the events after installation.
+   */
+  public function Init() {
+    // Start listening to events
+    WordPress_Hugo_Builder::GetInstance()->sensors->HookEvents();
   }
 
   /**
-   * Enables the admin notice on initial activation
+   * Returns the class name of a particular file that contains the class.
+   * @param string $file File name.
+   * @return string Class name.
    */
-  // public function activate() {
-  //   if ( 'yes' !== get_option( '_wpghs_fully_exported' ) ) {
-  //     set_transient( '_wphb_activated', 'yes' );
-  //   }
-  // }
+  public function GetClassFileClassName($file)
+  {
+    return $this->autoloader->GetClassFileClassName($file);
+  }
 
-  /**
-   * Displays the activation admin notice
-   */
-  // public function activation_notice() {
-  //   if ( ! get_transient( '_wphb_activated' ) ) {
-  //     return;
-  //   }
-  //
-  //   delete_transient( '_wphb_activated' );
-  //
-  // }
-
-  /**
-   * Get the Controller object.
-   *
-   * @return WordPress_Hugo_Builder_Controller
-   */
-  public function controller() {
-    return $this->controller;
+  public function GetBaseUrl()
+  {
+    return plugins_url('', __FILE__);
   }
 
   /**
-   * Lazy-load the CLI object.
-   *
-   * @return WordPress_Hugo_Builder_CLI
+   * @return string Full path to plugin directory WITH final slash.
    */
-  // public function cli() {
-  // 	if ( ! $this->cli ) {
-  // 		$this->cli = new WordPress_Hugo_Builder_CLI;
-  // 	}
-  //
-  // 	return $this->cli;
-  // }
+  public function GetBaseDir()
+  {
+    return plugin_dir_path(__FILE__);
+  }
 
   /**
-   * Lazy-load the Request object.
-   *
-   * @return WordPress_Hugo_Builder_Request
+   * @return string Plugin directory name.
    */
-  // public function request() {
-  //   if ( ! $this->request ) {
-  //     $this->request = new WordPress_Hugo_Builder_Request( $this );
-  //   }
-  //
-  //   return $this->request;
-  // }
+  public function GetBaseName()
+  {
+    return plugin_basename(__FILE__);
+  }
 
-  /**
-   * Lazy-load the Response object.
-   *
-   * @return WordPress_Hugo_Builder_Response
-   */
-  // public function response() {
-  //   if ( ! $this->response ) {
-  //     $this->response = new WordPress_Hugo_Builder_Response( $this );
-  //   }
-  //
-  //   return $this->response;
-  // }
+  public function define_constants() {
 
-  /**
-   * Lazy-load the Api object.
-   *
-   * @return WordPress_Hugo_Builder_Api
-   */
-  // public function api() {
-  //   if ( ! $this->api ) {
-  //     $this->api = new WordPress_Hugo_Builder_Api( $this );
-  //   }
-  //
-  //   return $this->api;
-  // }
-
-  /**
-   * Lazy-load the Export object.
-   *
-   * @return WordPress_Hugo_Builder_Export
-   */
-  // public function export() {
-  // 	if ( ! $this->export ) {
-  // 		$this->export = new WordPress_Hugo_Builder_Export( $this );
-  // 	}
-  //
-  // 	return $this->export;
-  // }
-
-  /**
-   * Lazy-load the Semaphore object.
-   *
-   * @return WordPress_Hugo_Builder_Semaphore
-   */
-  // public function semaphore() {
-  // 	if ( ! $this->semaphore ) {
-  // 		$this->semaphore = new WordPress_Hugo_Builder_Semaphore;
-  // 	}
-  //
-  // 	return $this->semaphore;
-  // }
-
-  /**
-   * Print to WP_CLI if in CLI environment or
-   * write to debug.log if WP_DEBUG is enabled
-   *
-   * @source http://www.stumiller.me/sending-output-to-the-wordpress-debug-log/
-   *
-   * @param mixed  $msg   Message text.
-   * @param string $write How to write the message, if CLI.
-   */
-  public static function write_log( $msg, $write = 'line' ) {
-    if ( defined( 'WP_CLI' ) && WP_CLI ) {
-      if ( is_array( $msg ) || is_object( $msg ) ) {
-        WP_CLI::print_value( $msg );
-      } else {
-        WP_CLI::$write( $msg );
-      }
-    } elseif ( true === WP_DEBUG ) {
-      if ( is_array( $msg ) || is_object( $msg ) ) {
-        error_log( print_r( $msg, true ) );
-      } else {
-        error_log( $msg );
-      }
+    // Plugin version.
+    if ( ! defined( 'WPHB_VERSION' ) ) {
+      define( 'WPHB_VERSION', $this->version );
+    }
+    // Plugin Name.
+    if ( ! defined( 'WPHB_BASE_NAME' ) ) {
+      define( 'WPHB_BASE_NAME', plugin_basename( __FILE__ ) );
+    }
+    // Plugin Directory URL.
+    if ( ! defined( 'WPHB_BASE_URL' ) ) {
+      define( 'WPHB_BASE_URL', plugin_dir_url( __FILE__ ) );
+    }
+    // Plugin Directory Path.
+    if ( ! defined( 'WPHB_BASE_DIR' ) ) {
+      define( 'WPHB_BASE_DIR', plugin_dir_path( __FILE__ ) );
     }
   }
+
 }
-?>
+
+// add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
+
+return WordPress_Hugo_Builder::GetInstance();
