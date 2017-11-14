@@ -143,9 +143,101 @@ class WordPress_Hugo_Builder {
 
     // Controller actions.
     // At least triggers when posts are created and updated
+    // Posts
     add_action( 'post_updated_messages', array( $this->controller, 'build_hugo' ) );
-    // add_action( 'publish_post', array( $this->controller, 'export_post' ) );
-    // add_action( 'delete_post', array( $this->controller, 'export_post' ) );
+    // add_action('post_updated', array($this, 'EventChanged'), 10, 3);
+    // add_action('delete_post', array($this, 'EventDeleted'), 10, 1);
+    // add_action('wp_trash_post', array($this, 'EventTrashed'), 10, 1);
+    // add_action('untrash_post', array($this, 'EventUntrashed'));
+
+    // Login/out
+    // add_action('wp_login', array($this->controller, 'build_hugo'), 10, 2);
+    // add_action('wp_logout', array($this->controller, 'build_hugo'));
+    // add_action('shutdown', array($this->controller, 'build_hugo'));
+
+    // Theme
+		// add_action( 'switch_theme', array( $this, 'EventThemeActivated' ) );
+
+    // Sites
+    // public function HookEvents()
+    // {
+    //     if ($this->plugin->IsMultisite()) {
+    //         add_action('admin_init', array($this, 'EventAdminInit'));
+    //         if (current_user_can('switch_themes')) {
+    //             add_action('shutdown', array($this, 'EventAdminShutdown'));
+    //         }
+    //         add_action('wpmu_new_blog', array($this, 'EventNewBlog'), 10, 1);
+    //         add_action('archive_blog', array($this, 'EventArchiveBlog'));
+    //         add_action('unarchive_blog', array($this, 'EventUnarchiveBlog'));
+    //         add_action('activate_blog', array($this, 'EventActivateBlog'));
+    //         add_action('deactivate_blog', array($this, 'EventDeactivateBlog'));
+    //         add_action('delete_blog', array($this, 'EventDeleteBlog'));
+    //         add_action('add_user_to_blog', array($this, 'EventUserAddedToBlog'), 10, 3);
+    //         add_action('remove_user_from_blog', array($this, 'EventUserRemovedFromBlog'));
+    //     }
+    // }
+
+    // Menus
+    // public function HookEvents()
+    // {
+    //     add_action('wp_create_nav_menu', array($this, 'CreateMenu'), 10, 2);
+    //     add_action('wp_delete_nav_menu', array($this, 'DeleteMenu'), 10, 1);
+    //     add_action('wp_update_nav_menu', array($this, 'UpdateMenu'), 10, 2);
+    //
+    //     add_action('wp_update_nav_menu_item', array($this, 'UpdateMenuItem'), 10, 3);
+    //     add_action('admin_menu', array($this, 'ManageMenuLocations'));
+    //
+    //     add_action('admin_init', array($this, 'EventAdminInit'));
+    //     // Customizer trigger
+    //     add_action('customize_register', array($this, 'CustomizeInit'));
+    //     add_action('customize_save_after', array($this, 'CustomizeSave'));
+    // }
+
+
+    // Attachments
+    // public function HookEvents()
+    // {
+    //     add_action('add_attachment', array($this, 'EventFileUploaded'));
+    //     add_action('delete_attachment', array($this, 'EventFileUploadedDeleted'));
+    //     add_action('admin_init', array($this, 'EventAdminInit'));
+    // }
+
+    // Content
+    // public function HookEvents()
+    // {
+    // 	if (current_user_can("edit_posts")) {
+    // 		add_action('admin_init', array($this, 'EventWordpressInit'));
+    // 	}
+    // 	add_action('transition_post_status', array($this, 'EventPostChanged'), 10, 3);
+    // 	add_action('delete_post', array($this, 'EventPostDeleted'), 10, 1);
+    // 	add_action('wp_trash_post', array($this, 'EventPostTrashed'), 10, 1);
+    // 	add_action('untrash_post', array($this, 'EventPostUntrashed'));
+    // 	add_action('edit_category', array($this, 'EventChangedCategoryParent'));
+    // 	add_action('save_post', array($this, 'SetRevisionLink'), 10, 3);
+    // 	add_action('publish_future_post', array($this, 'EventPublishFuture'), 10, 1);
+    //
+    // 	add_action('create_category', array($this, 'EventCategoryCreation'), 10, 1);
+    // 	add_action( 'create_post_tag', array( $this, 'EventTagCreation' ), 10, 1 );
+    //
+    // 	add_action( 'wp_head', array( $this, 'ViewingPost' ), 10 );
+    // 	add_filter('post_edit_form_tag', array($this, 'EditingPost'), 10, 1);
+    //
+    // 	add_filter( 'wp_update_term_data', array( $this, 'event_terms_rename' ), 10, 4 );
+    // }
+
+
+    // Comments
+    // public function HookEvents()
+    // {
+    //     add_action('edit_comment', array($this, 'EventCommentEdit'), 10, 1);
+    //     add_action('transition_comment_status', array($this, 'EventCommentApprove'), 10, 3);
+    //     add_action('spammed_comment', array($this, 'EventCommentSpam'), 10, 1);
+    //     add_action('unspammed_comment', array($this, 'EventCommentUnspam'), 10, 1);
+    //     add_action('trashed_comment', array($this, 'EventCommentTrash'), 10, 1);
+    //     add_action('untrashed_comment', array($this, 'EventCommentUntrash'), 10, 1);
+    //     add_action('deleted_comment', array($this, 'EventCommentDeleted'), 10, 1);
+    //     add_action('comment_post', array($this, 'EventComment'), 10, 2);
+    // }
 
     // add_shortcode( 'wphb', 'write_wphb_link' );
 
