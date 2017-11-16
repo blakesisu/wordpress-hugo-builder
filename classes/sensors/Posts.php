@@ -21,11 +21,9 @@ class WPHB_Sensors_Posts extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action( 'post_updated_messages', array( $this->app->compiler, 'build_hugo' ) );
-    // add_action('post_updated', array($this, 'EventChanged'), 10, 3);
-    // add_action('delete_post', array($this, 'EventDeleted'), 10, 1);
-    // add_action('wp_trash_post', array($this, 'EventTrashed'), 10, 1);
-    // add_action('untrash_post', array($this, 'EventUntrashed'));
+    // $this->addHooks(
+    //   array (
+    //   )
+    // );
   }
-
 }

@@ -32,14 +32,17 @@ class WPHB_Sensors_Sites extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action('wpmu_new_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('archive_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('unarchive_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('activate_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('deactivate_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('delete_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('add_user_to_blog', array($this->app->compiler, 'test_hugo'));
-    add_action('remove_user_from_blog', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'wpmu_new_blog',
+        'archive_blog',
+        'unarchive_blog',
+        'activate_blog',
+        'deactivate_blog',
+        'delete_blog',
+        'add_user_to_blog',
+        'remove_user_from_blog'
+      )
+    );
   }
-
 }

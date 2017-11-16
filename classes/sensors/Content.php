@@ -100,24 +100,27 @@ class WPHB_Sensors_Content extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    if (current_user_can("edit_posts")) {
-      add_action('admin_init', array($this->app->compiler, 'test_hugo'));
-    }
-    add_action('transition_post_status', array($this->app->compiler, 'test_hugo'));
-    add_action('delete_post', array($this->app->compiler, 'test_hugo'));
-    add_action('wp_trash_post', array($this->app->compiler, 'test_hugo'));
-    add_action('untrash_post', array($this->app->compiler, 'test_hugo'));
-    add_action('edit_category', array($this->app->compiler, 'test_hugo'));
-    add_action('save_post', array($this->app->compiler, 'test_hugo'));
-    add_action('publish_future_post', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'edit_category',
+        'create_category',
+        'create_post_tag',
+        'wp_head',
 
-    add_action('create_category', array($this->app->compiler, 'test_hugo'));
-    add_action( 'create_post_tag', array($this->app->compiler, 'test_hugo') );
+        /* page actions */
+        'publish_page', // when page is published
 
-    add_action( 'wp_head', array($this->app->compiler, 'test_hugo'));
-    add_filter('post_edit_form_tag', array($this->app->compiler, 'test_hugo'));
-
-    add_filter( 'wp_update_term_data', array($this->app->compiler, 'test_hugo') );
+        /* post actions */
+        // 'transition_post_status', // occurs in page and post
+        // 'save_post', // occurs in page and post
+        'publish_future_post',
+        // 'post_updated_messages', // occurs in page and post
+        'delete_post',
+        'wp_trash_post',
+        'wp_insert_post',
+        'untrash_post'
+      )
+    );
   }
 
 }

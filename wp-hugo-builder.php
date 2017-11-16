@@ -63,6 +63,13 @@ class WordPress_Hugo_Builder {
    */
   public $sensors;
 
+  /**
+   * current wp action.
+   *
+   * @var action
+   */
+  public $action = 'nope';
+
 	/**
 	 * Standard singleton pattern.
 	 * WARNING! To ensure the system always works as expected, AVOID using this method.

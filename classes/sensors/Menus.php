@@ -30,16 +30,16 @@ class WPHB_Sensors_Menus extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action('wp_create_nav_menu', array($this->app->compiler, 'test_hugo'));
-    add_action('wp_delete_nav_menu', array($this->app->compiler, 'test_hugo'));
-    add_action('wp_update_nav_menu', array($this->app->compiler, 'test_hugo'));
-
-    add_action('wp_update_nav_menu_item', array($this->app->compiler, 'test_hugo'));
-    add_action('admin_menu', array($this->app->compiler, 'test_hugo'));
-    add_action('admin_init', array($this->app->compiler, 'test_hugo'));
-    // Customizer trigger
-    add_action('customize_register', array($this->app->compiler, 'test_hugo'));
-    add_action('customize_save_after', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'wp_create_nav_menu',
+        'wp_delete_nav_menu',
+        'wp_update_nav_menu',
+        'wp_update_nav_menu_item',
+        // 'admin_menu',
+        'customize_register',
+        'customize_save_after'
+      )
+    );
   }
-
 }

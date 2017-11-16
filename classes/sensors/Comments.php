@@ -31,14 +31,18 @@ class WPHB_Sensors_Comments extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action('edit_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('transition_comment_status', array($this->app->compiler, 'test_hugo'));
-    add_action('spammed_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('unspammed_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('trashed_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('untrashed_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('deleted_comment', array($this->app->compiler, 'test_hugo'));
-    add_action('comment_post', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'edit_comment',
+        'transition_comment_status',
+        'spammed_comment',
+        'unspammed_comment',
+        'trashed_comment',
+        'untrashed_comment',
+        'deleted_comment',
+        'comment_post'
+      )
+    );
   }
 
 }

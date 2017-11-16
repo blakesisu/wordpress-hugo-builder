@@ -38,18 +38,11 @@ class WPHB_Sensors_PluginsThemes extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    $has_permission = ( current_user_can( 'install_plugins' ) || current_user_can( 'activate_plugins' ) ||
-              current_user_can( 'delete_plugins' ) || current_user_can( 'update_plugins' ) || current_user_can( 'install_themes' ) );
-
-    add_action( 'admin_init', array($this->app->compiler, 'test_hugo'));
-    if ( $has_permission ) {
-      add_action( 'shutdown', array($this->app->compiler, 'test_hugo'));
-    }
-    add_action( 'switch_theme', array($this->app->compiler, 'test_hugo'));
-
-    // TO DO.
-    add_action( 'wp_insert_post', array($this->app->compiler, 'test_hugo'));
-    add_action( 'delete_post', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'switch_theme'
+      )
+    );
   }
 
 }

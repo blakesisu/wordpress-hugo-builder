@@ -25,9 +25,13 @@ class WPHB_Sensors_Attachments extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action('add_attachment', array($this->app->compiler, 'test_hugo'));
-    add_action('delete_attachment', array($this->app->compiler, 'test_hugo'));
-    add_action('admin_init', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'add_attachment',
+        'delete_attachment',
+        // 'admin_init'
+      )
+    );
   }
 
 }

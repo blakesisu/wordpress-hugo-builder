@@ -27,11 +27,11 @@ class WPHB_Sensors_LogInOut extends WPHB_AbstractSensor {
    * Listening to events using WP hooks.
    */
   public function HookEvents() {
-    add_action('wp_login', array($this->app->compiler, 'test_hugo'));
-    add_action('wp_logout', array($this->app->compiler, 'test_hugo'));
-    add_action('password_reset', array($this->app->compiler, 'test_hugo'));
-    add_action('wp_login_failed', array($this->app->compiler, 'test_hugo'));
-    add_action('clear_auth_cookie', array($this->app->compiler, 'test_hugo'));
+    $this->addHooks(
+      array (
+        'wp_login',
+        'wp_logout',
+      )
+    );
   }
-
 }
