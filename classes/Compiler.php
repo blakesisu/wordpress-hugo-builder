@@ -79,21 +79,24 @@ class WPHB_Compiler {
    *
    * @return boolean
    */
-  public function instructHugo() {
+  // TODO: instruct hugo what kind of content should be built, and provide
+  // necessary meta data
+  public function instructHugo($id) {
     // $chosen = $this->get_lyric();
     // $action = $this->app->action;
     $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
     $this->estLogger($hugo);
 
-    $this->postHugoAPI($this->parseAction($this->app->action));
+    $this->postHugoAPI($this->parseAction($this->app->action, $id));
   }
 
   // Determine what kind of build command to pass API
-  public function parseAction($action) {
+  public function parseAction($action, $id) {
     $command = $action === 'post_updated_messages' ? 'build-page' : 'build-generic';
     return array(
       'text' => $command,
       'action' => $action,
+      'id' => $id,
     );
   }
 

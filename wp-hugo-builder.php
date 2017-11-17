@@ -168,6 +168,10 @@ class WordPress_Hugo_Builder {
     if ( ! defined( 'WPHB_BASE_DIR' ) ) {
       define( 'WPHB_BASE_DIR', plugin_dir_path( __FILE__ ) );
     }
+    // Plugin Logging Path.
+    if ( ! defined( 'WPHB_LOGGER' ) ) {
+      define( 'WPHB_BASE_DIR', "/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt" );
+    }
   }
 
 }
