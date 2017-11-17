@@ -26,6 +26,7 @@ class WPHB_Compiler {
     add_action( 'admin_head', array($this, 'hugo_css') );
   }
 
+  // This function used to do more...
   public function mock_hugo() {
     $this->mockHugoNotif();
   }
@@ -49,7 +50,6 @@ class WPHB_Compiler {
   // Actually hit end point
   public function postHugoAPI($instructions) {
     $url = 'http://localhost:3000/wp-hugo';
-    // $payload = json_encode ($instructions);
 
     $response = wp_remote_post(
       $url,
@@ -66,27 +66,24 @@ class WPHB_Compiler {
         $frontRes = $response['body'];
     }
 
-    $this->logger->putLog($frontRes);
+    // for logging
+    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
+    // $this->estLogger($hugo);
+    // $this->logger->putLog($frontRes);
     echo "<p id='hugo'>$frontRes</p>";
   }
 
   /**
-   * Passes commands to hugo build process on whatever instance it's running on.
+   * Builds actions into commands for hugo build process, then
+   * passes instructions to API post function
    *
    * Called on multitude of hooks.
    *
    * @param int $post_id Post ID.
-   *
-   * @return boolean
+   * TODO: instruct hugo what kind of content should be built, and provide
+   * necessary meta data
    */
-  // TODO: instruct hugo what kind of content should be built, and provide
-  // necessary meta data
   public function instructHugo($id) {
-    // $chosen = $this->get_lyric();
-    // $action = $this->app->action;
-    $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
-    $this->estLogger($hugo);
-
     $this->postHugoAPI($this->parseAction($this->app->action, $id));
   }
 
@@ -97,77 +94,11 @@ class WPHB_Compiler {
       'text' => $command,
       'action' => $action,
       'id' => $id,
+      'testing' => true,
     );
   }
 
-  // Test notification
-  /*
-  public function postSlackNotif($content) {
-    $url = 'https://hooks.slack.com/services/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';
-
-    $payload = json_encode (
-      array(
-        'text' => $content
-      )
-    );
-
-    $response = wp_remote_post(
-      $url,
-      array('body' => $payload)
-    );
-
-
-    if ( is_wp_error( $response ) ) {
-        $frontRes = $response->get_error_message();
-    } else {
-        $frontRes = $response['body'];
-    }
-
-    $this->logger->putLog($frontRes);
-    echo "<p id='hugo'>$frontRes</p>";
-  }
-   */
-
-  public function get_lyric() {
-    /** These are the lyrics to Hello Dolly */
-    $lyrics = "Hello, Dolly
-      Well, hello, Dolly
-      It's so nice to have you back where you belong
-      You're lookin' swell, Dolly
-      I can tell, Dolly
-      You're still glowin', you're still crowin'
-      You're still goin' strong
-      We feel the room swayin'
-      While the band's playin'
-      One of your old favourite songs from way back when
-      So, take her wrap, fellas
-      Find her an empty lap, fellas
-      Dolly'll never go away again
-      Hello, Dolly
-      Well, hello, Dolly
-      It's so nice to have you back where you belong
-      You're lookin' swell, Dolly
-      I can tell, Dolly
-      You're still glowin', you're still crowin'
-      You're still goin' strong
-      We feel the room swayin'
-      While the band's playin'
-      One of your old favourite songs from way back when
-      Golly, gee, fellas
-      Find her a vacant knee, fellas
-      Dolly'll never go away
-      Dolly'll never go away
-      Dolly'll never go away again";
-
-    // Here we split it into lines
-    $lyrics = explode( "\n", $lyrics );
-
-    // And then randomly choose a line
-    return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
-  }
-
-
-  // We need some CSS to position the paragraph
+  // Makes output to wordpress look a little better
   public function hugo_css() {
     // This makes sure that the positioning is also good for right-to-left languages
     $x = is_rtl() ? 'left' : 'right';
