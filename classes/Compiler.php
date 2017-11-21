@@ -83,17 +83,19 @@ class WPHB_Compiler {
    * TODO: instruct hugo what kind of content should be built, and provide
    * necessary meta data
    */
-  public function instructHugo($id) {
-    $this->postHugoAPI($this->parseAction($this->app->action, $id));
+  public function instructHugo($id, $content) {
+    $this->postHugoAPI($this->parseAction($this->app->action, $id, $content));
   }
 
   // Determine what kind of build command to pass API
-  public function parseAction($action, $id) {
-    $command = $action === 'post_updated_messages' ? 'build-page' : 'build-generic';
+  public function parseAction($action, $id, $content) {
+    $endpoint = strrpos($action, 'page') ? 'build-page' : 'build-generic';
+      // 'text' => $command,
     return array(
-      'text' => $command,
+      'endpoint' => $endpoint,
       'action' => $action,
       'id' => $id,
+      'content' => $content,
       'testing' => true,
     );
   }

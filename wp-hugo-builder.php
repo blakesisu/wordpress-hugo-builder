@@ -176,6 +176,6 @@ class WordPress_Hugo_Builder {
 
 }
 
-// add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
+add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
 
 return WordPress_Hugo_Builder::GetInstance();

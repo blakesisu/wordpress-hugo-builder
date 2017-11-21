@@ -20,11 +20,11 @@ abstract class WPHB_AbstractSensor {
 
   public function addHooks($actions) {
     foreach ($actions as $action) {
-      add_action($action, function($id) use ($action) {
+      add_action($action, function($id, $content) use ($action) {
         $this->app->action = $action;
         // $this->app->compiler->mockHugoNotif();
-        $this->app->compiler->instructHugo($id);
-      });
+        $this->app->compiler->instructHugo($id, $content);
+      }, 10, 2);
     }
   }
 }
