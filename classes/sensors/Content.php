@@ -111,13 +111,11 @@ class WPHB_Sensors_Content extends WPHB_AbstractSensor {
         'publish_page', // when page is published
 
         /* post actions */
-        // 'transition_post_status', // occurs in page and post
-        // 'save_post', // occurs in page and post
-        'publish_future_post',
-        // 'post_updated_messages', // occurs in page and post
-        'delete_post',
+        'publish_post',
+
+        // 'publish_future_post',
+        // 'delete_post',
         'wp_trash_post',
-        'wp_insert_post',
         'untrash_post'
       )
     );
