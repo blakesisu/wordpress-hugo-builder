@@ -168,14 +168,15 @@ class WordPress_Hugo_Builder {
     if ( ! defined( 'WPHB_BASE_DIR' ) ) {
       define( 'WPHB_BASE_DIR', plugin_dir_path( __FILE__ ) );
     }
+    // TODO: this needs to be abstracted, path to specific
     // Plugin Logging Path.
-    if ( ! defined( 'WPHB_LOGGER' ) ) {
-      define( 'WPHB_BASE_DIR', "/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt" );
-    }
+    // if ( ! defined( 'WPHB_LOGGER' ) ) {
+      // define( 'WPHB_BASE_DIR', "/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt" );
+    // }
   }
 
 }
 
-add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
+// add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
 
 return WordPress_Hugo_Builder::GetInstance();

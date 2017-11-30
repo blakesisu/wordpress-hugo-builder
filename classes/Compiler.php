@@ -110,7 +110,7 @@ class WPHB_Compiler {
     #hugo {
       float: $x;
       padding-$x: 15px;
-      padding-top: 5px;		
+      padding-top: 5px;
       margin: 0;
       font-size: 11px;
     }
