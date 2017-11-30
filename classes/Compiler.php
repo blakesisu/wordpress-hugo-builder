@@ -48,8 +48,13 @@ class WPHB_Compiler {
   }
 
   // Actually hit end point
+  // TODO: url input
   public function postHugoAPI($instructions) {
-    $url = 'http://localhost:3000/wp-hugo';
+    // localhost test
+    // $url = 'http://localhost:3000/wp-hugo';
+
+    // localhost test (vagrant)
+    $url = 'http://10.0.2.2:3000/wp-hugo';
 
     $response = wp_remote_post(
       $url,
@@ -70,7 +75,7 @@ class WPHB_Compiler {
     // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
     // $this->estLogger($hugo);
     // $this->logger->putLog($frontRes);
-    echo "<p id='hugo'>$frontRes</p>";
+    return "<p id='hugo'>$frontRes</p>";
   }
 
   /**
