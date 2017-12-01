@@ -1,7 +1,7 @@
 <?php
 /**
  * Compiler object manages tree retrieval, manipulation and publishing
- * @package WordPress_Hugo_Builder
+ * @package WordPress_Hugopress
  */
 
 /**
@@ -12,16 +12,16 @@ class WPHB_Compiler {
   /**
    * Application container.
    *
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   public $app;
 
   /**
    * Instantiates a new Compiler object
    *
-   * @param WordPress_Hugo_Builder $app Application container.
+   * @param WordPress_Hugopress $app Application container.
    */
-  public function __construct( WordPress_Hugo_Builder $app ) {
+  public function __construct( WordPress_Hugopress $app ) {
     $this->app = $app;
     add_action( 'admin_head', array($this, 'hugo_css') );
   }
@@ -35,7 +35,7 @@ class WPHB_Compiler {
     $action = $this->app->action;
     $content = $this->get_lyric();
 
-    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
+    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugopress/hugo_log.txt";
     // $this->estLogger($hugo);
     // $this->logger->putLog($content);
 
@@ -77,7 +77,7 @@ class WPHB_Compiler {
     }
 
     // for logging
-    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
+    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugopress/hugo_log.txt";
     // $this->estLogger($hugo);
     // $this->logger->putLog($frontRes);
     return "<p id='hugo'>$frontRes</p>";

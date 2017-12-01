@@ -1,7 +1,7 @@
 <?php
 /**
  * Compiler object manages tree retrieval, manipulation and publishing
- * @package WordPress_Hugo_Builder
+ * @package WordPress_Hugopress
  */
 
 /**
@@ -12,16 +12,16 @@ class WPHB_RestAPI {
   /**
    * Application container.
    *
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   public $app;
 
   /**
    * Instantiates a new Compiler object
    *
-   * @param WordPress_Hugo_Builder $app Application container.
+   * @param WordPress_Hugopress $app Application container.
    */
-  public function __construct( WordPress_Hugo_Builder $app ) {
+  public function __construct( WordPress_Hugopress $app ) {
     $this->app = $app;
     // add_action( 'rest_api_init', array($this, 'setup_rest_api') );
   }
@@ -38,7 +38,7 @@ class WPHB_RestAPI {
     $posts = get_posts( array(
       'author' => $data['id'],
     ) );
- 
+
     if ( empty( $posts ) ) {
       return null;
     }
@@ -47,7 +47,7 @@ class WPHB_RestAPI {
   }
 
   public function notify($info) {
-    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt";
+    // $hugo = SITE_ROOT."/wp-content/plugins/wordpress-hugopress/hugo_log.txt";
     $this->estLogger(WPHB_LOGGER);
     $this->logger->putLog($info);
     echo "<p id='hugo'>$info</p>";
@@ -73,7 +73,7 @@ class WPHB_RestAPI {
     $posts = get_posts( array(
       'author' => $data['id'],
     ) );
- 
+
     if ( empty( $posts ) ) {
       return null;
     }

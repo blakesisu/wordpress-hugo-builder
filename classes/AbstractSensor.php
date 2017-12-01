@@ -1,17 +1,17 @@
 <?php
 /**
- * @package WordPress_Hugo_Builder
+ * @package WordPress_Hugopress
  *
  * Abstract class used in all the sensors.
  * @see Sensors/*.php
  */
 abstract class WPHB_AbstractSensor {
   /**
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   protected $app;
 
-  public function __construct(WordPress_Hugo_Builder $app)
+  public function __construct(WordPress_Hugopress $app)
   {
       $this->app = $app;
   }

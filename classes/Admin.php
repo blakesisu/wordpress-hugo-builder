@@ -1,7 +1,7 @@
 <?php
 /**
  * Admin object manages settings and administration
- * @package WordPress_Hugo_Builder
+ * @package WordPress_Hugopress
  */
 
 /**
@@ -12,24 +12,37 @@ class WPHB_Admin {
   /**
    * Application container.
    *
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   public $app;
 
   /**
    * Instantiates a new Admin object
    *
-   * @param WordPress_Hugo_Builder $app Application container.
+   * @param WordPress_Hugopress $app Application container.
    */
-  public function __construct( WordPress_Hugo_Builder $app ) {
+  public function __construct( WordPress_Hugopress $app ) {
     $this->app = $app;
     $this->setup_admin_actions();
   }
 
   public function setup_admin_actions(){
     add_action('admin_init', array($this, 'hugo_endpoint_setting'));
+    // add_action('admin_menu', array($this, 'create_hugopress_options_page'));
   }
 
+  // public function create_hugopress_options_page(){
+  //     // Add the menu item and page
+  //     $page_title = 'HugoPress Settings Page';
+  //     $menu_title = 'HugoPress Plugin';
+  //     $capability = 'manage_options';
+  //     $slug = 'wp-hugopress';
+  //     $callback = array( $this, 'plugin_settings_page_content' );
+  //     $icon = 'dashicons-admin-plugins';
+  //     $position = 100;
+  //
+  //     add_menu_page( $page_title, $menu_title, $capability, $slug, $callback, $icon, $position );
+  }
   public function hugo_endpoint_setting(){
 
       add_settings_section(
