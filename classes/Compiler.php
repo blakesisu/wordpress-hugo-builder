@@ -47,14 +47,19 @@ class WPHB_Compiler {
     $this->logger->setTimestamp("D M d 'y h.i A");
   }
 
+  // Check Hugo API status
+  public function checkHugoAPIStatus($url) {
+    return wp_remote_get( $url );
+  }
+
   // Actually hit end point
   // TODO: url input
-  public function postHugoAPI($instructions) {
+  public function postHugoAPI($instructions, $url) {
     // localhost test
     // $url = 'http://localhost:3000/wp-hugo';
 
     // localhost test (vagrant)
-    $url = 'http://10.0.2.2:3000/wp-hugo';
+    // $url = 'http://10.0.2.2:3000/wp-hugo';
 
     $response = wp_remote_post(
       $url,
@@ -89,7 +94,13 @@ class WPHB_Compiler {
    * necessary meta data
    */
   public function instructHugo($id, $content) {
-    $this->postHugoAPI($this->parseAction($this->app->action, $id, $content));
+      $url = get_option('hugopress-rest-input');
+      if ($this->checkHugoAPIStatus($url)) {
+          $this->postHugoAPI(
+              $this->parseAction($this->app->action, $id, $content),
+              $url.'wp-hugo'
+          );
+      }
   }
 
   // Determine what kind of build command to pass API

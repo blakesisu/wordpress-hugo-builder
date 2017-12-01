@@ -40,7 +40,7 @@ class WordPress_Hugo_Builder {
    * @var string
    */
   public $version = '0.1';
-	const PLG_CLS_PRFX = 'WPHB_';
+    const PLG_CLS_PRFX = 'WPHB_';
 
   /**
    * Compiler object.
@@ -48,6 +48,13 @@ class WordPress_Hugo_Builder {
    * @var WPHB_Compiler
    */
   public $compiler;
+
+  /**
+   * Admin object.
+   *
+   * @var WPHB_Admin
+   */
+  public $admin;
 
   /**
    * Logger object.
@@ -70,20 +77,20 @@ class WordPress_Hugo_Builder {
    */
   public $action = 'nope';
 
-	/**
-	 * Standard singleton pattern.
-	 * WARNING! To ensure the system always works as expected, AVOID using this method.
-	 * Instead, make use of the plugin instance provided by 'wsal_init' action.
-	 * @return WordPress_Hugo_Builder Returns the current plugin instance.
-	 */
-	public static function GetInstance()
-	{
-		static $instance = null;
-		if (!$instance) {
-			$instance = new self();
-		}
-		return $instance;
-	}
+    /**
+     * Standard singleton pattern.
+     * WARNING! To ensure the system always works as expected, AVOID using this method.
+     * Instead, make use of the plugin instance provided by 'wsal_init' action.
+     * @return WordPress_Hugo_Builder Returns the current plugin instance.
+     */
+    public static function GetInstance()
+    {
+        static $instance = null;
+        if (!$instance) {
+            $instance = new self();
+        }
+        return $instance;
+    }
 
   /**
    * Called at load time, hooks into WP core
@@ -99,6 +106,7 @@ class WordPress_Hugo_Builder {
 
     $this->compiler = new WPHB_Compiler( $this );
     $this->sensors = new WPHB_SensorManager( $this );
+    $this->admin = new WPHB_Admin( $this );
 
     add_action( 'init', array( $this, 'Init' ) );
   }
@@ -107,9 +115,8 @@ class WordPress_Hugo_Builder {
    * Boot/Loader method
    */
   public function boot() {
-    // Load up stuff here if needed
+      // Load up stuff here if needed
   }
-
 
   /**
    * @internal Start to trigger the events after installation.
@@ -177,6 +184,6 @@ class WordPress_Hugo_Builder {
 
 }
 
-// add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
+add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
 
 return WordPress_Hugo_Builder::GetInstance();
