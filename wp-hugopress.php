@@ -1,11 +1,11 @@
 <?php
 /**
- * @package WordPress_Hugo_Builder
+ * @package WordPress_Hugopress
  * @version 0.1
  */
 /*
-Plugin Name: WordPress Hugo Builder
-Plugin URI: http://wordpress.org/plugins/wp-hugo-builder/
+Plugin Name: WordPress Hugopress
+Plugin URI: http://wordpress.org/plugins/wp-hugopress/
 Description: This is not just a plugin, it's the plugin.
 Authors: Blake Watkins, Steven Waller
 Version: 1.6
@@ -18,7 +18,7 @@ Author URI: https://blkmwtkns.co/
  * Main application class for the plugin. Responsible for bootstrapping
  * any hooks and instantiating all service classes.
  */
-class WordPress_Hugo_Builder {
+class WordPress_Hugopress {
 
   /**
    * Object instance.
@@ -32,7 +32,7 @@ class WordPress_Hugo_Builder {
    *
    * @var string
    */
-  public static $text_domain = 'wp-hugo-builder';
+  public static $text_domain = 'wp-hugopress';
 
   /**
    * Current version.
@@ -81,7 +81,7 @@ class WordPress_Hugo_Builder {
      * Standard singleton pattern.
      * WARNING! To ensure the system always works as expected, AVOID using this method.
      * Instead, make use of the plugin instance provided by 'wsal_init' action.
-     * @return WordPress_Hugo_Builder Returns the current plugin instance.
+     * @return WordPress_Hugopress Returns the current plugin instance.
      */
     public static function GetInstance()
     {
@@ -99,6 +99,7 @@ class WordPress_Hugo_Builder {
     // Define important plugin constants.
     $this->define_constants();
 
+    require_once(__DIR__ . '/setup-hooks.php');
     require_once( 'classes/Autoloader.php' );
     require_once( 'logger.php' );
     $this->autoloader = new WPHB_Autoloader( $this );
@@ -123,7 +124,7 @@ class WordPress_Hugo_Builder {
    */
   public function Init() {
     // Start listening to events
-    WordPress_Hugo_Builder::GetInstance()->sensors->HookEvents();
+    WordPress_Hugopress::GetInstance()->sensors->HookEvents();
   }
 
   /**
@@ -178,12 +179,12 @@ class WordPress_Hugo_Builder {
     // TODO: this needs to be abstracted, path to specific
     // Plugin Logging Path.
     // if ( ! defined( 'WPHB_LOGGER' ) ) {
-      // define( 'WPHB_BASE_DIR', "/wp-content/plugins/wordpress-hugo-builder/hugo_log.txt" );
+      // define( 'WPHB_BASE_DIR', "/wp-content/plugins/wordpress-hugopress/hugo_log.txt" );
     // }
   }
 
 }
 
-add_action('plugins_loaded', array(WordPress_Hugo_Builder::GetInstance(), 'boot'));
+add_action('plugins_loaded', array(WordPress_Hugopress::GetInstance(), 'boot'));
 
-return WordPress_Hugo_Builder::GetInstance();
+return WordPress_Hugopress::GetInstance();

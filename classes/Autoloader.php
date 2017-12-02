@@ -6,24 +6,24 @@
  */
 class WPHB_Autoloader {
   /**
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   protected $app;
   protected $paths = array();
-  
-  public function __construct(WordPress_Hugo_Builder $app) {
+
+  public function __construct(WordPress_Hugopress $app) {
     $this->app = $app;
     // register autoloader
     spl_autoload_register(array($this, 'LoadClass'));
   }
-  
+
   public function Register($prefix, $path) {
     if (!isset($this->paths[$prefix])) {
         $this->paths[$prefix] = array();
     }
     $this->paths[$prefix][] = rtrim(str_replace('\\', '/', $path), '/') . '/';
   }
-  
+
   /**
    * This is the class autoloader. You should not call this directly.
    * @param string $class Class name.
@@ -45,7 +45,7 @@ class WPHB_Autoloader {
     }
     return false;
   }
-  
+
   /**
    * Returns the class name of a particular file that contains the class.
    * @param string $file File name.
@@ -53,7 +53,7 @@ class WPHB_Autoloader {
    */
   public function GetClassFileClassName($file) {
     $file = str_replace('\\', '/', $file); // win/dos hotfix
-    
+
     foreach ($this->paths as $prefix => $paths) {
       foreach ($paths as $path) {
         if (strstr($file, $path) !== false) {

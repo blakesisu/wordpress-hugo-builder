@@ -87,12 +87,12 @@
  */
 class WPHB_Sensors_Content extends WPHB_AbstractSensor {
   /**
-   * @var WordPress_Hugo_Builder
+   * @var WordPress_Hugopress
    */
   public $app;
   // protected $app;
 
-  public function __construct(WordPress_Hugo_Builder $app) {
+  public function __construct(WordPress_Hugopress $app) {
     $this->app = $app;
   }
 

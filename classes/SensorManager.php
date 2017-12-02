@@ -14,9 +14,9 @@ final class WPHB_SensorManager extends WPHB_AbstractSensor {
   /**
    * Instantiates a new SensorManager object
    *
-   * @param WordPress_Hugo_Builder $app Application container.
+   * @param WordPress_Hugopress $app Application container.
    */
-  public function __construct(WordPress_Hugo_Builder $app) {
+  public function __construct(WordPress_Hugopress $app) {
     parent::__construct($app);
     $this->app = $app;
 
@@ -39,17 +39,17 @@ final class WPHB_SensorManager extends WPHB_AbstractSensor {
     //     }
     // }
   }
-  
+
   public function HookEvents() {
     foreach ($this->sensors as $sensor) {
         $sensor->HookEvents();
     }
   }
-  
+
   public function GetSensors() {
     return $this->sensors;
   }
-  
+
   /**
    * Add new sensor from file inside autoloader path.
    * @param string $file Path to file.
@@ -57,7 +57,7 @@ final class WPHB_SensorManager extends WPHB_AbstractSensor {
   public function AddFromFile($file) {
     $this->AddFromClass($this->app->GetClassFileClassName($file));
   }
-  
+
   /**
    * Add new sensor given class name.
    * @param string $class Class name.
@@ -65,7 +65,7 @@ final class WPHB_SensorManager extends WPHB_AbstractSensor {
   public function AddFromClass($class) {
     $this->AddInstance(new $class($this->app));
   }
-  
+
   /**
    * Add newly created sensor to list.
    * @param WSAL_AbstractSensor $sensor The new sensor.
