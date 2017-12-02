@@ -33,6 +33,11 @@ class WPHB_Admin {
     add_action('admin_init', array($this, 'create_hugopress_options'));
   }
 
+  public function self_consuming_actions(){
+      add_action( 'wp_ajax_nopriv_test_hugopress_api', array($this, 'test_hugopress_api') );
+      add_action( 'wp_ajax_test_hugopress_api', array($this, 'test_hugopress_api') );
+  }
+
   public function test_hugopress_api(){
       if(isset($_POST['input'])){
           switch ($_POST['input']) {
@@ -58,11 +63,6 @@ class WPHB_Admin {
           echo 'Bad input';
       }
       die();
-  }
-
-  public function self_consuming_actions(){
-      add_action( 'wp_ajax_nopriv_test_hugopress_api', array($this, 'test_hugopress_api') );
-      add_action( 'wp_ajax_test_hugopress_api', array($this, 'test_hugopress_api') );
   }
 
   public function create_hugopress_options_page(){
@@ -158,7 +158,7 @@ class WPHB_Admin {
   public function display_hugopress_api_test($args){
       $label = $args["label_for"];
 echo '<div id="'.$label.'-form" class="form-inline">
-        <input id="'.$label.'-input" class="form-inline" type="text" style="display: inline;"></input>
+        <input id="'.$label.'-input" class="form-inline" type="text" style="display: inline;" disabled></input>
         <button id="'.$label.'-submit" class="btn" style="display: inline-block;">Submit</button>
     </div>
         <div id ="hugopress-api-test-mssg" style="display: block;"></div>';
