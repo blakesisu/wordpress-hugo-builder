@@ -90,8 +90,6 @@ class WPHB_Compiler {
    * Called on multitude of hooks.
    *
    * @param int $post_id Post ID.
-   * TODO: instruct hugo what kind of content should be built, and provide
-   * necessary meta data
    */
   public function instructHugo($id, $content) {
       $url = get_option('hugopress-rest-input');

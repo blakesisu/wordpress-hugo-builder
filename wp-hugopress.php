@@ -99,6 +99,7 @@ class WordPress_Hugopress {
     // Define important plugin constants.
     $this->define_constants();
 
+    require_once(__DIR__ . '/setup-hooks.php');
     require_once( 'classes/Autoloader.php' );
     require_once( 'logger.php' );
     $this->autoloader = new WPHB_Autoloader( $this );
