@@ -13,7 +13,7 @@ jQuery(function ($) {
         type: 'post',
         data: {
           action: 'test_hugopress_api',
-          input: 'hugopress-endpoints'
+          input: '/endpoints'
         },
       })
         .done(function(response) {

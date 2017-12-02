@@ -102,7 +102,7 @@ class WPHB_Compiler {
         if ($this->checkHugoAPIStatus($url)) {
             $this->postHugoAPI(
                 $this->parseAction($this->app->action, $id, $content),
-                $url.'hugopress-build'
+                $url.'/build'
             );
         }
     }
