@@ -23,7 +23,7 @@ class WPHB_RestAPI {
    */
   public function __construct( WordPress_Hugopress $app ) {
     $this->app = $app;
-    // add_action( 'rest_api_init', array($this, 'setup_rest_api') );
+    add_action( 'rest_api_init', array($this, 'setup_rest_api') );
   }
 
   public function setup_rest_api() {
